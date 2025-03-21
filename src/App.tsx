@@ -18,6 +18,7 @@ function App() {
   // const [arr1,setArr1]=useState<Task[]>([])
   // const [arr2,setArr2]=useState<Task[]>([])
   // const [arr3,setArr3]=useState<Task[]>([])
+  // setArr()
 let arr1:Task[]=[]  
 let arr2:Task[]=[]  
 let arr3:Task[]=[]  
@@ -77,7 +78,7 @@ arr.forEach((t)=>{
       {/* <Modal isOpen = {isOpen} setIsOpen = {setIsOpen}/> */}
       <h1 className='text-6xl font-serif text-center mt-20'>KANBAN BOARD</h1>
       {/* <p>hello</p> */}
-      <Modal isOpen = {isOpen} setIsOpen = {setIsOpen}/>
+      <Modal isOpen = {isOpen} setIsOpen = {setIsOpen} arr={arr} setArr={setArr}/>
 
       <div className='flex mt-10 justify-center'>
         <input type="search" className='p-1.5 focus:outline-none border border-gray-500 rounded-xl'/>

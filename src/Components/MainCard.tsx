@@ -1,6 +1,6 @@
-import React from 'react'
-import Modal from './Modal';
-import { useState } from 'react'
+// import React from 'react'
+// import Modal from './Modal';
+// import { useState } from 'react'
 interface Task {
   name: string;
   description: string;
@@ -11,12 +11,12 @@ interface Props {
 }
 
 function MainCard({ arr }: Props) {
-  const [isOpen, setIsOpen] =  useState(false)
+  // const [isOpen, setIsOpen] =  useState(false)
 
-  const edit=()=>{
-    <Modal isOpen = {isOpen} setIsOpen = {setIsOpen}/>
+  // const edit=()=>{
+  //   <Modal isOpen = {isOpen} setIsOpen = {setIsOpen}/>
     
-  }
+  // }
   return (
     <div className=" w-[250px] p-5 space-y-5 overflow-y-auto h-[520px] border ">
       {arr.map((element, index) => {
@@ -25,7 +25,7 @@ function MainCard({ arr }: Props) {
         // console.log(element.title)
         // console.log(element.description)
         return (
-          <div onClick={edit} key={index} className="border rounded-lg p-3 shadow-md">
+          <div  key={index} className="border rounded-lg p-3 shadow-md">
             <h1 className="font-bold text-lg">{element.name}</h1>
             <p className="text-sm">{element.description}</p>
           </div>

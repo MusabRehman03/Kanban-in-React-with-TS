@@ -3,7 +3,8 @@ import { useEffect } from "react";
 interface ModalProps {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-
+  arr:Task[]
+  setArr: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 interface Task {
   name: string;
@@ -17,7 +18,7 @@ interface Task {
 //     c:"world"
 // }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, setIsOpen }) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, setIsOpen, arr, setArr }) => {
   //   const [name, setName] = useState("");
   //   const [description, setDescription] = useState("");
   //   const [category, setCategory] = useState("");
@@ -26,7 +27,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, setIsOpen }) => {
     description: "",
     category: "",
   });
-  const [arr,setArr]= useState<Task[]>(JSON.parse(localStorage.getItem("arr")||"[]"))
+  // const [arr,setArr]= useState<Task[]>(JSON.parse(localStorage.getItem("arr")||"[]"))
   
 
   useEffect(() => {
@@ -41,7 +42,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, setIsOpen }) => {
     // console.log({ name,category, description });
      // Close modal after submission
   };
-  const handleSubmit=(e:React.FormEvent)=>{
+  const handleSubmit=()=>{
     console.log("Task",task)
 
     // e.preventDefault();
